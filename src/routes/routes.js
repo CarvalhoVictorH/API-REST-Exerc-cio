@@ -1,8 +1,7 @@
 const express = require("express");
 const rotas = express();
+const { listarLivros } = require("../controllers/listarController");
 
-rotas.get("/", (req, res) => {
-  res.send("Servidor Ok!");
-});
+rotas.get("/livros", listarLivros);
 
 module.exports = rotas;
